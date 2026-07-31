@@ -162,12 +162,31 @@ export default function Home() {
               <h2>I have done it exactly once.</h2>
 
               <p>
-                The experiment was <a href="https://github.com/anghel4d/bytecoders">bytecoders</a>,
-                a bytecode VM grown by a multi-model evolutionary contest. Opus
-                4.8 acted as the sovereign orchestrator. Six blind Opus supervisors
-                each commissioned fifteen independent implementations of one
-                component from a fleet of GPT coding models. The supervisors saw
-                candidates and test results, not each other.
+                The recovered primary trace says exactly how. At 16:31 UTC on
+                13 July 2026 I gave Opus 4.8 a 946-character architecture prompt:
+                create persistent Opus supervisors, have each commission five
+                Sol/high and ten Luna/xhigh implementations per stage, keep the
+                supervisors blind, select winners, and propagate them through
+                three stages. I then chose six supervisors and a bytecode VM.
+              </p>
+
+              <aside className="callout">
+                <p className="callout-label">The prompt that worked</p>
+                <p>
+                  “Subagents are never told what the others are doing. Winners
+                  are picked in a RNN/GAN-style evolutionary contest.”
+                </p>
+              </aside>
+
+              <p>
+                There was no campaign skill. Opus improvised the control plane:
+                it designed a sixteen-program judge, built golden components,
+                proved the judge caught a deliberately broken jump fixup,
+                smoke-tested one Sol and one Luna candidate, and only then
+                spawned six persistent Opus supervisors. Those supervisors each
+                commissioned fifteen independent implementations of one
+                component from GPT coding models. They saw candidates and test
+                results, not each other.
               </p>
 
               <div className="scoreboard" role="group" aria-label="Bytecoders experiment results">
@@ -175,6 +194,7 @@ export default function Home() {
                 <div><strong>15×</strong><span>candidates each</span></div>
                 <div><strong>3</strong><span>generations</span></div>
                 <div><strong>270</strong><span>candidate calls</span></div>
+                <div><strong>43m</strong><span>spawn to artifact</span></div>
                 <div><strong>16/16</strong><span>fitness programs</span></div>
                 <div><strong>23</strong><span>operations removed</span></div>
               </div>
@@ -184,10 +204,15 @@ export default function Home() {
                 the winning assembler and evolved the executor. Generation three
                 inherited both and evolved the optimizer. Every candidate faced
                 the same executable battery; the head orchestrator independently
-                re-tested finalists before composing the resulting VM.
+                re-tested finalists before composing the resulting VM. The first
+                supervisor launched at 17:04:46. The working artifact was reported
+                at 17:47:38: forty-two minutes and fifty-two seconds later.
               </p>
 
               <p>
+                The 270 figure is the production population: ninety assembler,
+                ninety executor and ninety optimizer traces. It excludes the two
+                smoke probes used to validate the runner before the real fan-out.
                 Roughly forty thousand candidate lines were produced while the
                 expensive supervisor context mostly contained compact briefs,
                 scores, failure summaries and finalists. The finished Rust
@@ -198,12 +223,25 @@ export default function Home() {
               </p>
 
               <aside className="callout">
+                <p className="callout-label">Critical provenance correction</p>
+                <p>
+                  The <code>coding-campaign</code> skill now checked into
+                  bytecoders did not produce this run. I asked Opus to archive
+                  the method only after the VM worked. A following Fable session
+                  then tried to reverse-engineer that event into a reusable
+                  skill. The skill is archaeology, not the original control
+                  plane.
+                </p>
+              </aside>
+
+              <aside className="callout">
                 <p className="callout-label">An inconvenient result</p>
                 <p>
-                  Model obedience is part of fitness. I got this experiment to
-                  work with Opus 4.8. Fable would not adhere to the campaign
-                  contract. A clever supervisor that will not run the protocol is
-                  not a supervisor; it is a failed candidate.
+                  Model obedience is part of fitness. Opus 4.8 turned the short
+                  architecture prompt into the complete working experiment.
+                  Fable would not reproduce that behavior when asked to turn it
+                  into a general campaign. A clever supervisor that will not run
+                  the protocol is not a supervisor; it is a failed candidate.
                 </p>
               </aside>
 
@@ -213,6 +251,9 @@ export default function Home() {
                 winners and inherited components. The repository contains the
                 briefs, runners, candidate outputs, supervisor reports, fitness
                 battery and final artifact. The claim is inspectable.
+                The <a href="https://github.com/anghel4d/gan-coding/blob/main/EXPERIMENT-PROVENANCE.md">recovered
+                provenance record</a> identifies the primary traces and commits
+                to them cryptographically.
               </p>
             </section>
 
@@ -351,17 +392,30 @@ export default function Home() {
               <h2>A result without a harness is a story.</h2>
 
               <p>
-                The bytecoders repository is the first working harness and its
-                fossil record. It contains the campaign law, model launcher,
-                parallel fleet runner, component briefs, deterministic fitness
-                tests, blind supervisor reports, composition step and final VM.
-                Every layer is plain enough to replace.
+                The retained bytecoders repository contains the working runner,
+                model launcher, component briefs, deterministic fitness tests,
+                candidate outputs, blind supervisor reports, composition step and
+                final VM. Its current campaign skill is a later reconstruction.
+                Re-running it verifies the surviving machinery and winning
+                lineage; it does not retroactively make that skill the producer
+                of the original run.
+              </p>
+
+              <p>
+                The stronger fossil record is the recovered conversation tree:
+                one Opus head trace, six Opus supervisor traces, 270 production
+                candidate traces, and the exact nineteen orchestration events
+                that connected them. The raw JSONLs are privately preserved
+                pending redaction because they contain hidden reasoning, local
+                paths and machine metadata. Their hashes and a sanitized account
+                are published in the provenance record.
               </p>
 
               <div className="terminal" aria-label="Commands to verify bytecoders">
                 <div><span /><span /><span /></div>
                 <pre><code>{`git clone https://github.com/anghel4d/bytecoders
 cd bytecoders
+# repository access is currently required
 
 # verify the fleet runner
 bash .claude/skills/coding-campaign/reference/tests/test_run_fleet.sh
@@ -408,7 +462,7 @@ CONTEST_ROOT=harness bash harness/compose_and_test.sh \\
 
       <footer>
         <p>© 2026 anghel4d</p>
-        <a href="https://github.com/anghel4d/bytecoders">Experiment + harness ↗</a>
+        <a href="https://github.com/anghel4d/gan-coding/blob/main/EXPERIMENT-PROVENANCE.md">Experiment provenance ↗</a>
         <a href="#top">Top ↑</a>
       </footer>
     </main>
