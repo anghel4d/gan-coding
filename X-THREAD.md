@@ -1,6 +1,6 @@
 # GANcoding launch thread
 
-Replace `[ARTICLE_URL]` after publication. Each numbered block is one post.
+Each numbered block is one post.
 
 ## 1/
 
@@ -202,7 +202,7 @@ Software is now a population.
 
 The full argument, the exact recovered prompt, the prior-art boundary, and the working harness:
 
-[ARTICLE_URL]
+https://rainbowcrash.lol/gancoding.html
 
 Recovered provenance + trace commitments:
 https://github.com/anghel4d/gan-coding/blob/main/EXPERIMENT-PROVENANCE.md

@@ -2,6 +2,8 @@
 
 The publication source for “GANcoding: Software Is Now a Population, Not a Project.”
 
+Live article: [rainbowcrash.lol/gancoding.html](https://rainbowcrash.lol/gancoding.html)
+
 ## Local
 
 ```bash
@@ -30,4 +32,4 @@ This re-execution validates the retained artifact. It does not establish that th
 
 ## Publish
 
-This project uses OpenAI Sites through `.openai/hosting.json`. Deploy privately for review, then change visibility only after the article URL and X thread are final.
+The canonical article is published as a static, script-free export on the existing RainbowCrash GitHub Pages site. The source application remains independently buildable and testable here.
